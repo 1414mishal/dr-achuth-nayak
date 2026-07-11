@@ -3,17 +3,16 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { GraduationCap, Target, LineChart, ArrowUpRight } from "lucide-react";
-import { LampContainer } from "@/components/ui/lamp";
 
 export function Hero() {
   return (
     <section id="home" className="relative isolate">
-      <LampContainer>
+      <div className="flex flex-col items-center px-5 pt-36 pb-8 text-center md:pt-44">
         <motion.div
-          initial={{ opacity: 0.5, y: 100 }}
+          initial={{ opacity: 0.5, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
-          className="flex flex-col items-center text-center"
+          transition={{ delay: 0.2, duration: 0.7, ease: "easeInOut" }}
+          className="flex flex-col items-center"
         >
           <span className="eyebrow mb-5 text-teal-400">
             Associate Professor · Yenepoya Medical College Hospital
@@ -40,7 +39,7 @@ export function Hero() {
             </div>
           </div>
         </motion.div>
-      </LampContainer>
+      </div>
 
       <div className="mx-auto grid w-full max-w-container grid-cols-1 items-center gap-14 px-5 py-16 md:px-10 md:py-20 lg:grid-cols-[1.12fr_0.88fr]">
         <div className="relative z-10 max-w-2xl">
@@ -71,19 +70,6 @@ export function Hero() {
 
         <div className="relative z-10 hidden lg:block">
           <div className="space-y-4">
-            <div className="shadow-glow-sm relative mx-auto w-56 overflow-hidden rounded-3xl border border-teal-400/25 bg-navy-900/85 p-1.5 backdrop-blur-md">
-              <div className="relative aspect-square overflow-hidden rounded-[1.35rem]">
-                <Image
-                  src="/dr-achuth-nayak.jpg"
-                  alt="Dr. Achuth S. Nayak, Radiation Oncologist"
-                  fill
-                  sizes="224px"
-                  className="object-cover"
-                  priority
-                />
-              </div>
-            </div>
-
             <CredentialCard
               icon={GraduationCap}
               eyebrow="Trained At"
