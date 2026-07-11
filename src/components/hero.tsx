@@ -3,16 +3,19 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { GraduationCap, Target, LineChart, ArrowUpRight } from "lucide-react";
+import { FloatingPaths } from "@/components/ui/background-paths";
 
 export function Hero() {
   return (
     <section id="home" className="relative isolate">
-      <div className="flex flex-col items-center px-5 pt-36 pb-8 text-center md:pt-44">
+      <div className="relative flex flex-col items-center px-5 pt-36 pb-8 text-center md:pt-44">
+        <FloatingPaths position={1} />
+        <FloatingPaths position={-1} />
         <motion.div
           initial={{ opacity: 0.5, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.7, ease: "easeInOut" }}
-          className="flex flex-col items-center"
+          className="relative z-10 flex flex-col items-center"
         >
           <span className="eyebrow mb-5 text-teal-400">
             Associate Professor · Yenepoya Medical College Hospital
