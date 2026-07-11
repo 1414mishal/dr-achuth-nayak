@@ -9,12 +9,13 @@ export function Hero() {
   return (
     <section id="home" className="relative isolate">
       <div className="relative flex min-h-[calc(100vh-5rem)] flex-col items-center justify-center px-5 py-16 text-center">
-        <EtherealShadow
-          className="pointer-events-none absolute inset-0"
-          color="rgba(20, 184, 166, 0.3)"
-          animation={{ scale: 55, speed: 45 }}
-          noise={{ opacity: 0.04, scale: 1.2 }}
-        />
+        <div className="pointer-events-none absolute inset-0">
+          <EtherealShadow
+            color="rgba(20, 184, 166, 0.3)"
+            animation={{ scale: 55, speed: 45 }}
+            noise={{ opacity: 0.04, scale: 1.2 }}
+          />
+        </div>
         <motion.div
           initial={{ opacity: 0.5, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
