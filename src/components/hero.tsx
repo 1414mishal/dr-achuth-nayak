@@ -1,7 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { GraduationCap, Target, LineChart, PhoneCall, Mail, ArrowUpRight } from "lucide-react";
+import { GraduationCap, Target, LineChart, ArrowUpRight } from "lucide-react";
 import { LampContainer } from "@/components/ui/lamp";
 
 export function Hero() {
@@ -15,7 +16,7 @@ export function Hero() {
           className="flex flex-col items-center text-center"
         >
           <span className="eyebrow mb-5 text-teal-300">
-            Assistant Professor · Yenepoya Medical College Hospital
+            Associate Professor · Yenepoya Medical College Hospital
           </span>
           <h1 className="font-display bg-gradient-to-br from-slate-100 to-slate-400 bg-clip-text py-2 text-5xl font-bold tracking-tight text-transparent md:text-7xl">
             Dr. Achuth
@@ -53,22 +54,23 @@ export function Hero() {
               Areas of Expertise
             </a>
           </div>
-
-          <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-mist">
-            <a href="tel:+919833369546" className="flex items-center gap-2 transition-colors hover:text-teal-400">
-              <PhoneCall size={15} strokeWidth={1.5} />
-              +91 98333 69546
-            </a>
-            <span className="hidden h-3 w-px bg-ink/15 sm:block" />
-            <a href="mailto:sumithnayak88@gmail.com" className="flex items-center gap-2 transition-colors hover:text-teal-400">
-              <Mail size={15} strokeWidth={1.5} />
-              sumithnayak88@gmail.com
-            </a>
-          </div>
         </div>
 
         <div className="relative z-10 hidden lg:block">
           <div className="space-y-4">
+            <div className="shadow-glow-sm relative mx-auto w-56 overflow-hidden rounded-3xl border border-teal-400/25 bg-navy-900/85 p-1.5 backdrop-blur-md">
+              <div className="relative aspect-square overflow-hidden rounded-[1.35rem]">
+                <Image
+                  src="/dr-achuth-nayak.jpg"
+                  alt="Dr. Achuth S. Nayak, Radiation Oncologist"
+                  fill
+                  sizes="224px"
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </div>
+
             <CredentialCard
               icon={GraduationCap}
               eyebrow="Trained At"

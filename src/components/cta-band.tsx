@@ -1,6 +1,5 @@
-import { PhoneCall } from "lucide-react";
+import { MapPin, ArrowUpRight } from "lucide-react";
 import { Reveal } from "@/components/reveal";
-import { WhatsAppIcon } from "@/components/whatsapp-icon";
 
 export function CtaBand() {
   return (
@@ -15,25 +14,17 @@ export function CtaBand() {
           Facing a diagnosis? Get <span className="serif-accent text-teal-300">clarity</span> first.
         </h2>
         <p className="relative mx-auto mt-5 max-w-md text-sm leading-relaxed text-mist md:text-base">
-          Appointments, second opinions and academic enquiries are all welcome, in person at Yenepoya Medical
-          College Hospital or over a call.
+          Appointments, second opinions and academic enquiries are all welcome, in person at the Department of
+          Radiation Oncology, Yenepoya Medical College Hospital.
         </p>
         <div className="relative mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a
-            href="tel:+919833369546"
-            className="shadow-glow-lg inline-flex items-center gap-2 rounded-full bg-teal-400 px-7 py-3.5 text-sm font-semibold text-ink transition-all duration-200 hover:scale-[1.04] hover:bg-teal-300 hover:text-white active:scale-[0.98]"
+            href="#contact"
+            className="group shadow-glow-lg inline-flex items-center gap-2 rounded-full bg-teal-400 px-7 py-3.5 text-sm font-semibold text-ink transition-all duration-200 hover:scale-[1.04] hover:bg-teal-300 hover:text-white active:scale-[0.98]"
           >
-            <PhoneCall size={16} strokeWidth={1.5} />
-            Call +91 98333 69546
-          </a>
-          <a
-            href="https://wa.me/919833369546"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-ink/15 bg-navy-900/60 px-7 py-3.5 text-sm font-semibold text-ink backdrop-blur-sm transition-colors duration-200 hover:border-teal-400/40 hover:text-teal-300"
-          >
-            <WhatsAppIcon className="h-4 w-4" />
-            Message on WhatsApp
+            <MapPin size={16} strokeWidth={1.5} />
+            Visit the Department
+            <ArrowUpRight size={14} strokeWidth={2} className="transition-transform duration-300 group-hover:translate-x-0.5" />
           </a>
         </div>
       </Reveal>

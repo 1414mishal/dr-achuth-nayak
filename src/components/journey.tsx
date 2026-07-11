@@ -2,10 +2,15 @@ import { Reveal } from "@/components/reveal";
 
 const MILESTONES = [
   {
-    date: "Nov 2021 – Present",
-    title: "Assistant Professor, Radiation Oncology",
+    date: "May 2026 – Present",
+    title: "Associate Professor, Radiation Oncology",
     place: "Yenepoya Medical College Hospital, Deralakatte, Mangaluru",
     active: true,
+  },
+  {
+    date: "Nov 2021 – May 2026",
+    title: "Assistant Professor, Radiation Oncology",
+    place: "Yenepoya Medical College Hospital, Deralakatte, Mangaluru",
   },
   {
     date: "Sep 2019 – Oct 2021",
@@ -26,7 +31,7 @@ const MILESTONES = [
     date: "Aug 2013 – Jul 2016",
     title: "MD, Radiation Oncology",
     place:
-      "Tata Memorial Hospital, Mumbai · Homi Bhabha National University, guided and mentored by Dr. Reena Engineer, Professor of Radiation Oncology",
+      "Tata Memorial Hospital, Mumbai · Homi Bhabha National University, guided by Dr. Reena Engineer, Professor of Radiation Oncology",
   },
   {
     date: "Jun 2006 – Jun 2012",

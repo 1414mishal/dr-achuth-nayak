@@ -29,10 +29,11 @@ export function About() {
           <p>
             Dr. Achuth S. Nayak is a radiation oncologist currently serving as{" "}
             <span className="font-semibold text-ink">
-              Assistant Professor in the Department of Radiation Oncology at Yenepoya Medical College Hospital,
+              Associate Professor in the Department of Radiation Oncology at Yenepoya Medical College Hospital,
               Deralakatte, Mangaluru
             </span>
-            , a role he has held since November 2021.
+            , a role he has held since May 2026, after serving as Assistant Professor at the same department since
+            November 2021.
           </p>
           <p>
             He completed his MBBS at Kasturba Medical College, Mangalore, followed by his{" "}

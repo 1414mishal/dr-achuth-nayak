@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Dr. Achuth S. Nayak, Radiation Oncologist, Mangaluru | Yenepoya Medical College Hospital",
   description:
-    "Dr. Achuth S. Nayak, Radiation Oncologist in Mangaluru. MBBS (KMC Mangalore), MD Radiation Oncology (Tata Memorial Hospital, Mumbai), DNB. Assistant Professor, Department of Radiation Oncology, Yenepoya Medical College Hospital, Deralakatte. Brachytherapy, SRS/SBRT, gynaecological & head and neck cancers.",
+    "Dr. Achuth S. Nayak, Radiation Oncologist in Mangaluru. MBBS (KMC Mangalore), MD Radiation Oncology (Tata Memorial Hospital, Mumbai), DNB. Associate Professor, Department of Radiation Oncology, Yenepoya Medical College Hospital, Deralakatte. Brachytherapy, SRS/SBRT, gynaecological & head and neck cancers.",
   keywords: [
     "radiation oncologist Mangalore",
     "radiation oncologist Mangaluru",
@@ -65,13 +65,13 @@ export const metadata: Metadata = {
     url: siteUrl,
     title: "Dr. Achuth S. Nayak, Radiation Oncologist, Mangaluru",
     description:
-      "Tata Memorial Hospital–trained radiation oncologist. Assistant Professor at Yenepoya Medical College Hospital, Mangaluru. Brachytherapy, SRS/SBRT, gynaecological & head and neck cancers.",
+      "Tata Memorial Hospital–trained radiation oncologist. Associate Professor at Yenepoya Medical College Hospital, Mangaluru. Brachytherapy, SRS/SBRT, gynaecological & head and neck cancers.",
     images: [{ url: "/android-chrome-512.png", width: 512, height: 512 }],
   },
   twitter: {
     card: "summary",
     title: "Dr. Achuth S. Nayak, Radiation Oncologist, Mangaluru",
-    description: "Tata Memorial Hospital–trained radiation oncologist. Assistant Professor at Yenepoya Medical College Hospital, Mangaluru.",
+    description: "Tata Memorial Hospital–trained radiation oncologist. Associate Professor at Yenepoya Medical College Hospital, Mangaluru.",
     images: ["/android-chrome-512.png"],
   },
   other: {
@@ -96,10 +96,8 @@ const jsonLd = {
   url: siteUrl,
   image: `${siteUrl}/android-chrome-512.png`,
   description:
-    "Radiation oncologist in Mangaluru specialising in brachytherapy, SRS/SBRT, gynaecological and head & neck cancers. Assistant Professor at Yenepoya Medical College Hospital.",
+    "Radiation oncologist in Mangaluru specialising in brachytherapy, SRS/SBRT, gynaecological and head & neck cancers. Associate Professor at Yenepoya Medical College Hospital.",
   medicalSpecialty: "Oncologic",
-  email: "mailto:sumithnayak88@gmail.com",
-  telephone: "+91-9833369546",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Mangaluru",

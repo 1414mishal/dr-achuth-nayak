@@ -12,7 +12,6 @@ import {
   X,
 } from "lucide-react";
 import { RadiationMark } from "@/components/radiation-mark";
-import { WhatsAppIcon } from "@/components/whatsapp-icon";
 
 const NAV_LINKS = [
   { href: "#about", label: "About", icon: Info },
@@ -71,16 +70,7 @@ export function Navbar() {
 
         <div className="flex items-center gap-2">
           <a
-            href="https://wa.me/919833369546"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Message the doctor on WhatsApp"
-            className="hidden h-11 w-11 items-center justify-center rounded-full border border-teal-400/25 bg-teal-400/10 text-teal-400 transition-all duration-150 hover:scale-110 hover:bg-teal-400/15 sm:inline-flex"
-          >
-            <WhatsAppIcon className="h-[18px] w-[18px]" />
-          </a>
-          <a
-            href="tel:+919833369546"
+            href="#contact"
             className="shadow-glow-sm hidden h-10 items-center gap-2 rounded-full bg-teal-400 px-5 text-sm font-semibold text-ink transition-all duration-300 hover:scale-[1.04] hover:bg-teal-300 hover:text-white md:inline-flex"
           >
             <PhoneCall size={16} strokeWidth={2} />
@@ -112,25 +102,13 @@ export function Navbar() {
                 {label}
               </a>
             ))}
-            <div className="mt-2 flex items-center gap-3">
-              <a
-                href="tel:+919833369546"
-                onClick={() => setMenuOpen(false)}
-                className="inline-flex h-11 flex-1 items-center justify-center gap-2 rounded-full bg-teal-400 font-semibold text-ink"
-              >
-                Get in Touch
-              </a>
-              <a
-                href="https://wa.me/919833369546"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Message the doctor on WhatsApp"
-                onClick={() => setMenuOpen(false)}
-                className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-teal-400/25 bg-teal-400/10 text-teal-400"
-              >
-                <WhatsAppIcon className="h-[18px] w-[18px]" />
-              </a>
-            </div>
+            <a
+              href="#contact"
+              onClick={() => setMenuOpen(false)}
+              className="mt-2 inline-flex h-11 items-center justify-center gap-2 rounded-full bg-teal-400 font-semibold text-ink"
+            >
+              Get in Touch
+            </a>
           </div>
         </div>
       )}
