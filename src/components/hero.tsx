@@ -18,14 +18,27 @@ export function Hero() {
           <span className="eyebrow mb-5 text-teal-300">
             Associate Professor · Yenepoya Medical College Hospital
           </span>
-          <h1 className="font-display bg-gradient-to-br from-slate-100 to-slate-400 bg-clip-text py-2 text-5xl font-bold tracking-tight text-transparent md:text-7xl">
+          <h1 className="font-display [text-shadow:0_2px_24px_rgb(0_0_0_/_65%)] bg-gradient-to-br from-white to-slate-300 bg-clip-text py-2 text-5xl font-bold tracking-tight text-transparent md:text-7xl">
             Dr. Achuth
             <br />
             S. Nayak
           </h1>
-          <p className="font-display mt-5 text-lg font-medium text-slate-300 md:text-xl">
-            Radiation Oncologist <span className="text-slate-500">·</span> MBBS · MD · DNB
+          <p className="font-display mt-5 text-lg font-medium text-slate-200 [text-shadow:0_2px_16px_rgb(0_0_0_/_65%)] md:text-xl">
+            Radiation Oncologist <span className="text-slate-400">·</span> MBBS · MD · DNB
           </p>
+
+          <div className="shadow-glow-sm relative mx-auto mt-8 w-32 overflow-hidden rounded-full border border-teal-400/25 bg-navy-900/85 p-1 backdrop-blur-md md:w-40">
+            <div className="relative aspect-square overflow-hidden rounded-full">
+              <Image
+                src="/dr-achuth-nayak.jpg"
+                alt="Dr. Achuth S. Nayak, Radiation Oncologist"
+                fill
+                sizes="160px"
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
         </motion.div>
       </LampContainer>
 
