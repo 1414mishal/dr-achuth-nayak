@@ -3,14 +3,18 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { GraduationCap, Target, LineChart, ArrowUpRight } from "lucide-react";
-import { FloatingPaths } from "@/components/ui/background-paths";
+import { EtherealShadow } from "@/components/ui/etheral-shadow";
 
 export function Hero() {
   return (
     <section id="home" className="relative isolate">
-      <div className="relative flex flex-col items-center px-5 pt-36 pb-8 text-center md:pt-44">
-        <FloatingPaths position={1} />
-        <FloatingPaths position={-1} />
+      <div className="relative flex min-h-[calc(100vh-5rem)] flex-col items-center justify-center px-5 py-16 text-center">
+        <EtherealShadow
+          className="pointer-events-none absolute inset-0"
+          color="rgba(20, 184, 166, 0.3)"
+          animation={{ scale: 55, speed: 45 }}
+          noise={{ opacity: 0.04, scale: 1.2 }}
+        />
         <motion.div
           initial={{ opacity: 0.5, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
