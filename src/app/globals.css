@@ -17,10 +17,10 @@
    component) supplies the conic position itself via --conic-position,
    so we recompute plain from/to stops here with higher specificity to
    win over Tailwind's generated rules. */
-.from-cyan-500.via-transparent.to-transparent {
+.from-teal-400.via-transparent.to-transparent {
   --tw-gradient-stops: var(--tw-gradient-from), transparent;
 }
-.from-transparent.via-transparent.to-cyan-500 {
+.from-transparent.via-transparent.to-teal-400 {
   --tw-gradient-stops: transparent, var(--tw-gradient-to);
 }
 
