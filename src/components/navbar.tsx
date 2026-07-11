@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import {
   Home,
   Info,
@@ -11,7 +12,6 @@ import {
   Menu,
   X,
 } from "lucide-react";
-import { RadiationMark } from "@/components/radiation-mark";
 
 const NAV_LINKS = [
   { href: "#about", label: "About", icon: Info },
@@ -40,8 +40,8 @@ export function Navbar() {
     <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${navBg}`}>
       <nav className="mx-auto flex h-20 w-full max-w-container items-center justify-between px-5 md:px-10">
         <a href="#home" className="group flex min-w-0 items-center gap-2.5">
-          <span className="shadow-glow-sm grid h-9 w-9 shrink-0 place-items-center rounded-lg border border-teal-400/25 bg-teal-400/10 transition-transform duration-500 group-hover:rotate-90">
-            <RadiationMark className="h-[18px] w-[18px]" />
+          <span className="shadow-glow-sm grid h-9 w-9 shrink-0 place-items-center overflow-hidden rounded-lg transition-transform duration-500 group-hover:rotate-90">
+            <Image src="/favicon.svg" alt="" width={36} height={36} className="h-full w-full" />
           </span>
           <span className="font-display text-base font-bold tracking-tight whitespace-nowrap sm:text-lg">
             Dr. Achuth S. Nayak

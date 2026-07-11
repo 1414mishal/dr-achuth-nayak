@@ -3,19 +3,11 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { GraduationCap, Target, LineChart, ArrowUpRight } from "lucide-react";
-import { EtherealShadow } from "@/components/ui/etheral-shadow";
 
 export function Hero() {
   return (
     <section id="home" className="relative isolate">
-      <div className="relative flex min-h-[calc(100vh-5rem)] flex-col items-center justify-center px-5 py-16 text-center">
-        <div className="pointer-events-none absolute inset-0">
-          <EtherealShadow
-            color="rgba(20, 184, 166, 0.3)"
-            animation={{ scale: 55, speed: 45 }}
-            noise={{ opacity: 0.04, scale: 1.2 }}
-          />
-        </div>
+      <div className="relative flex min-h-[calc(100vh-5rem)] flex-col items-center justify-center px-5 pt-32 pb-12 text-center md:pt-40">
         <motion.div
           initial={{ opacity: 0.5, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}

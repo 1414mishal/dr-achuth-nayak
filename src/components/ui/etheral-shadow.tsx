@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useRef, useId, useEffect, CSSProperties } from "react";
-import { animate, useMotionValue, AnimationPlaybackControls } from "framer-motion";
 
 interface AnimationConfig {
   scale: number;
@@ -47,37 +46,27 @@ export function EtherealShadow({
   const id = useInstanceId();
   const animationEnabled = animation && animation.scale > 0;
   const feColorMatrixRef = useRef<SVGFEColorMatrixElement>(null);
-  const hueRotateMotionValue = useMotionValue(180);
-  const hueRotateAnimation = useRef<AnimationPlaybackControls | null>(null);
 
   const displacementScale = animation ? mapRange(animation.scale, 1, 100, 20, 100) : 0;
   const animationDuration = animation ? mapRange(animation.speed, 1, 100, 1000, 50) : 1;
 
   useEffect(() => {
-    if (feColorMatrixRef.current && animationEnabled) {
-      if (hueRotateAnimation.current) {
-        hueRotateAnimation.current.stop();
-      }
-      hueRotateMotionValue.set(0);
-      hueRotateAnimation.current = animate(hueRotateMotionValue, 360, {
-        duration: animationDuration / 25,
-        repeat: Infinity,
-        repeatType: "loop",
-        repeatDelay: 0,
-        ease: "linear",
-        delay: 0,
-        onUpdate: (value: number) => {
-          if (feColorMatrixRef.current) {
-            feColorMatrixRef.current.setAttribute("values", String(value));
-          }
-        },
-      });
+    if (!feColorMatrixRef.current || !animationEnabled) return;
 
-      return () => {
-        hueRotateAnimation.current?.stop();
-      };
+    const cycleMs = (animationDuration / 25) * 1000;
+    const start = performance.now();
+    let rafId = 0;
+
+    function tick(now: number) {
+      const elapsed = (now - start) % cycleMs;
+      const value = (elapsed / cycleMs) * 360;
+      feColorMatrixRef.current?.setAttribute("values", String(value));
+      rafId = requestAnimationFrame(tick);
     }
-  }, [animationEnabled, animationDuration, hueRotateMotionValue]);
+    rafId = requestAnimationFrame(tick);
+
+    return () => cancelAnimationFrame(rafId);
+  }, [animationEnabled, animationDuration]);
 
   return (
     <div
