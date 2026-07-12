@@ -14,8 +14,8 @@ export function Stats() {
       <div className="mx-auto w-full max-w-container">
         <div className="grid grid-cols-2 gap-px bg-ink/10 md:grid-cols-4">
           {STATS.map((stat, i) => (
-            <Reveal key={stat.label} delay={i * 0.08}>
-              <div className="group flex flex-col items-center bg-navy-900/75 px-4 py-10 text-center backdrop-blur-md md:px-6 md:py-14">
+            <Reveal key={stat.label} delay={i * 0.08} className="h-full">
+              <div className="group flex h-full flex-col items-center justify-center bg-navy-900/75 px-4 py-10 text-center backdrop-blur-md md:px-6 md:py-14">
                 <div className="font-display text-[2rem] font-bold tracking-tight text-teal-400 transition-transform duration-300 group-hover:scale-110 sm:text-4xl md:text-5xl">
                   <CountUp target={stat.value} suffix={stat.suffix} />
                 </div>
