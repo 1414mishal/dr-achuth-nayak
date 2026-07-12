@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useId, useEffect, CSSProperties } from "react";
+import React, { useRef, useId, useEffect, useState, CSSProperties } from "react";
 
 interface AnimationConfig {
   scale: number;
@@ -44,8 +44,27 @@ export function EtherealShadow({
   className,
 }: EtherealShadowProps) {
   const id = useInstanceId();
-  const animationEnabled = animation && animation.scale > 0;
   const feColorMatrixRef = useRef<SVGFEColorMatrixElement>(null);
+
+  // The animated SVG turbulence + double displacement-map filter is extremely
+  // expensive to recompute every frame. On phones and for users who prefer
+  // reduced motion it pegs the main thread and makes the whole page janky, so
+  // we drop the filter + rAF loop there and render a cheap static tint instead.
+  const [lite, setLite] = useState(false);
+  useEffect(() => {
+    if (typeof window === "undefined" || !window.matchMedia) return;
+    const queries = [
+      window.matchMedia("(max-width: 1024px)"),
+      window.matchMedia("(prefers-reduced-motion: reduce)"),
+      window.matchMedia("(pointer: coarse)"),
+    ];
+    const update = () => setLite(queries.some((q) => q.matches));
+    update();
+    queries.forEach((q) => q.addEventListener("change", update));
+    return () => queries.forEach((q) => q.removeEventListener("change", update));
+  }, []);
+
+  const animationEnabled = !lite && !!animation && animation.scale > 0;
 
   const displacementScale = animation ? mapRange(animation.scale, 1, 100, 20, 100) : 0;
   const animationDuration = animation ? mapRange(animation.speed, 1, 100, 1000, 50) : 1;

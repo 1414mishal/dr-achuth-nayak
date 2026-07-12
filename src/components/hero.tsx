@@ -7,7 +7,7 @@ import { GraduationCap, Target, LineChart, ArrowUpRight } from "lucide-react";
 export function Hero() {
   return (
     <section id="home" className="relative isolate">
-      <div className="relative flex min-h-[calc(100vh-5rem)] flex-col items-center justify-center px-5 pt-32 pb-12 text-center md:pt-40">
+      <div className="relative flex min-h-[calc(100svh-5rem)] flex-col items-center justify-center px-5 pt-28 pb-12 text-center sm:pt-32 md:pt-40">
         <motion.div
           initial={{ opacity: 0.5, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
